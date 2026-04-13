@@ -7,6 +7,7 @@ class Categoria(models.Model):
     def __str__(self):
         return f'({self.id}) - {self.descricao}'
 
+
 # alexa prepara lata monstre
 # ok chefi
 # alexa abrir lata monstre
