@@ -1,0 +1,133 @@
+[
+{
+  "model": "core.autor",
+  "pk": 1,
+  "fields": {
+    "nome": "Frank Herbert",
+    "email": null
+  }
+  
+},
+{
+  "model": "core.autor",
+  "pk": 2,
+  "fields": {
+    "nome": "William Gibson",
+    "email": null
+  }
+},
+{
+  "model": "core.autor",
+  "pk": 3,
+  "fields": {
+    "nome": "Philip K. Dick",
+    "email": null
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 1,
+  "fields": {
+    "descricao": "Fantasia"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 2,
+  "fields": {
+    "descricao": "Fic��o C�entifica"
+  }
+},
+{
+  "model": "core.editora",
+  "pk": 1,
+  "fields": {
+    "nome": "Aleph"
+  }
+},
+{
+  "model": "core.editora",
+  "pk": 2,
+  "fields": {
+    "nome": "Darkside"
+  }
+},
+{
+  "model": "core.livro",
+  "pk": 1,
+  "fields": {
+    "titulo": "Neuromancer",
+    "isbn": "4343431",
+    "quantidade": 20,
+    "preco": "47.90",
+    "categoria": 2,
+    "editora": 1,
+    "capa": null,
+    "autor": [
+      2
+    ]
+  }
+},
+{
+  "model": "core.livro",
+  "pk": 2,
+  "fields": {
+    "titulo": "Duna",
+    "isbn": "32132132",
+    "quantidade": 100,
+    "preco": "78.50",
+    "categoria": 2,
+    "editora": 1,
+    "capa": 2,
+    "autor": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.livro",
+  "pk": 3,
+  "fields": {
+    "titulo": "Androides sonham com ovelhas el�tricas",
+    "isbn": "4323231",
+    "quantidade": 45,
+    "preco": "56.43",
+    "categoria": 2,
+    "editora": 1,
+    "capa": null,
+    "autor": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7WWh9s6jMzry2Gbnx30H8d$wIZzPnIKrhbOpBi0Ny25dtOcRoOK+ileRqPtzv+CUQk=",
+    "last_login": "2026-04-07T17:56:54.280Z",
+    "is_superuser": true,
+    "email": "a@a.com",
+    "name": "Superusu�rio",
+    "is_active": true,
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$gDw2xQZgwFkYpidganQBRU$8lNQVIM3rCWmyLCdPM0a3pcSHLmLYRZfhg1/snempV0=",
+    "last_login": null,
+    "is_superuser": true,
+    "email": "marcoandre@gmail.com",
+    "name": "Marco Andr� Lopes Mendes",
+    "is_active": true,
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
