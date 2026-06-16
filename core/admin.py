@@ -6,7 +6,7 @@ from django.contrib.admin import ModelAdmin, register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Autor, Categoria, Editora, Livro, User
+from core.models import Autor, Categoria, Compra, Editora, Livro, User
 
 
 @register(Autor)
@@ -45,6 +45,13 @@ class LivroAdmin(ModelAdmin):
     list_per_page = 25
 
 
+@register(Compra)
+class CompraAdmin(ModelAdmin):
+    list_display = ('usuario', 'status')
+    ordering = ('usuario', 'status')
+    list_per_page = 10
+
+
 @register(User)
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
@@ -53,7 +60,7 @@ class UserAdmin(BaseUserAdmin):
     list_display = ['email', 'name']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal Info'), {'fields': ('name',)}),
+        (_('Personal Info'), {'fields': ('name', 'foto')}),
         (
             _('Permissions'),
             {
@@ -79,7 +86,7 @@ class UserAdmin(BaseUserAdmin):
                     'password1',
                     'password2',
                     'name',
-                    'is_active',
+                    'fotois_active',
                     'is_staff',
                     'is_superuser',
                 ),
