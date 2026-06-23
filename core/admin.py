@@ -45,7 +45,6 @@ class LivroAdmin(ModelAdmin):
     list_per_page = 25
 
 
-@register(itensCompra)
 class ItensCompraInline(TabularInline):
     model = itensCompra
     extra = 1  # Quantidade de itens adicionais
