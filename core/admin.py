@@ -6,7 +6,7 @@ from django.contrib.admin import ModelAdmin, TabularInline, register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Autor, Categoria, Compra, Editora, Livro, User, itensCompra
+from core.models import Autor, Categoria, Compra, Editora, ItensCompra, Livro, User
 
 
 @register(Autor)
@@ -46,7 +46,7 @@ class LivroAdmin(ModelAdmin):
 
 
 class ItensCompraInline(TabularInline):
-    model = itensCompra
+    model = ItensCompra
     extra = 1  # Quantidade de itens adicionais
 
 
