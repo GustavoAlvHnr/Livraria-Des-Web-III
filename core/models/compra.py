@@ -19,3 +19,8 @@ class ItensCompra(models.Model):
     compra = models.ForeignKey(Compra, on_delete=models.CASCADE, related_name='itens')
     livro = models.ForeignKey(Livro, on_delete=models.PROTECT)
     quantidade = models.PositiveIntegerField(default=1)
+
+
+@property
+def total(self):
+    return sum(item.livro.preco * item.quantidade for item in self.itens.all())
